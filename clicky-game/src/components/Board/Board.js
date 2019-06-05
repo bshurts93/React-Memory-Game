@@ -1,10 +1,16 @@
 import React from "react";
 import Card from "../Card/Card";
 import "./style.css";
+import teams from "../../utils/teams";
 
 class Board extends React.Component {
+  componentDidMount() {
+    teams.getImageExtentions();
+    console.log(`Image extentions: ${teams.imageExtentions}`);
+  }
+
   renderCard() {
-    return <Card onClick={() => this.handleClick} />;
+    return <Card src="" onClick={() => this.handleClick} />;
   }
 
   handleClick() {
