@@ -2,19 +2,22 @@ import React from "react";
 import Card from "../Card/Card";
 import "./style.css";
 import teams from "../../utils/teams";
+import shuffle from "../../utils/shuffle";
 
 class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      imgSources: ["TEST", "TEST 2"]
+      imgSources: []
     };
   }
 
   // Set as current array from teams.js
-  localExtentions = teams.getImageExtentions();
+  localExtentions = shuffle(teams.getImageExtentions());
 
   componentDidMount() {
+    console.log(this.localExtentions);
+
     this.setState(
       {
         imgSources: this.localExtentions
@@ -28,7 +31,11 @@ class Board extends React.Component {
 
   renderCard(i) {
     return (
-      <Card src={this.state.imgSources[i]} onClick={() => this.handleClick} />
+      <Card
+        id={i}
+        src={this.state.imgSources[i]}
+        onClick={() => this.handleClick}
+      />
     );
   }
 
