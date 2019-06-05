@@ -6,7 +6,7 @@ function Card(props) {
     <div className="col s4">
       <img
         className="card-image"
-        src="./logos/hawks.png"
+        src={props.src}
         alt="dog"
         onClick={props.onClick()}
       />
