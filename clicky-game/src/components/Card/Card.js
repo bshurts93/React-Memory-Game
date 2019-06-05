@@ -3,7 +3,7 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="col s4">
+    <div className="card-box col s3">
       <img
         className="card-image"
         src={props.src}

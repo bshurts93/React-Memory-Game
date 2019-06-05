@@ -11,6 +11,7 @@ class Board extends React.Component {
     };
   }
 
+  // Set as current array from teams.js
   localExtentions = teams.getImageExtentions();
 
   componentDidMount() {
@@ -26,7 +27,9 @@ class Board extends React.Component {
   }
 
   renderCard(i) {
-    return <Card src={this.localExtentions} onClick={() => this.handleClick} />;
+    return (
+      <Card src={this.state.imgSources[i]} onClick={() => this.handleClick} />
+    );
   }
 
   handleClick() {
@@ -40,16 +43,19 @@ class Board extends React.Component {
           {this.renderCard(0)}
           {this.renderCard(1)}
           {this.renderCard(2)}
+          {this.renderCard(3)}
         </div>
         <div className="board-row row">
-          {this.renderCard(3)}
           {this.renderCard(4)}
           {this.renderCard(5)}
-        </div>
-        <div className="board-row row">
           {this.renderCard(6)}
           {this.renderCard(7)}
+        </div>
+        <div className="board-row row">
           {this.renderCard(8)}
+          {this.renderCard(9)}
+          {this.renderCard(10)}
+          {this.renderCard(11)}
         </div>
       </div>
     );

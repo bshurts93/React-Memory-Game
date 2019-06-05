@@ -1,5 +1,10 @@
+.card-box {
+  background-color: rgb(238, 238, 238);
+  height: 12rem;
+}
+
 .card-image {
-  width: 80%;
+  max-width: 10rem;
   display: block;
   margin: 0 auto;
 }
