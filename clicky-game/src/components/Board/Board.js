@@ -44,9 +44,11 @@ class Board extends React.Component {
     );
   }
 
-  handleClick() {
-    console.log("CLICKED!");
-  }
+  handleClick = () => {
+    this.setState({
+      imgSources: shuffle(teams.getImageExtentions())
+    });
+  };
 
   render() {
     return (
