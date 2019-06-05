@@ -1,6 +1,13 @@
 import React from "react";
+
+// COMPONENTS
+import Nav from "../Nav/Nav";
 import Card from "../Card/Card";
+
+// STYLE
 import "./style.css";
+
+// UTILITIES
 import teams from "../../utils/teams";
 import shuffle from "../../utils/shuffle";
 
@@ -16,8 +23,6 @@ class Board extends React.Component {
   localExtentions = shuffle(teams.getImageExtentions());
 
   componentDidMount() {
-    console.log(this.localExtentions);
-
     this.setState(
       {
         imgSources: this.localExtentions
@@ -46,6 +51,7 @@ class Board extends React.Component {
   render() {
     return (
       <div className="board container">
+        <Nav />
         <div className="board-row row">
           {this.renderCard(0)}
           {this.renderCard(1)}

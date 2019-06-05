@@ -1,0 +1,13 @@
+.nav-wrapper {
+  background-color: black;
+}
+
+.brand-logo {
+  position: relative;
+  height: 100%;
+}
+
+.nhl-logo {
+  height: 100%;
+  margin-left: 3rem;
+}

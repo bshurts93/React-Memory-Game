@@ -4,7 +4,7 @@
 }
 
 .card-image {
-  max-width: 10rem;
+  width: 10rem;
   display: block;
   margin: 0 auto;
 }
