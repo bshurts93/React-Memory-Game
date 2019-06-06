@@ -1,10 +1,21 @@
 .card-box {
-  background-color: rgb(238, 238, 238);
   height: 12rem;
 }
 
+.circle {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 10%;
+  background-color: rgb(221, 221, 221);
+  height: 100%;
+  width: 100%;
+}
+
 .card-image {
-  width: 10rem;
-  display: block;
-  margin: 0 auto;
+  position: relative;
+  width: 60%;
+  margin-top: 9%; /* Half the height */
+  margin-left: 9%; /* Half the width */
+  z-index: 10;
 }

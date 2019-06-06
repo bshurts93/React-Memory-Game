@@ -34,6 +34,7 @@ const teams = {
   ],
   imageExtentions: [],
   getImageExtentions: function() {
+    this.imageExtentions = [];
     for (var i = 0; i < this.names.length; i++) {
       const imgSrc = "./logos/" + this.names[i] + ".png";
       this.imageExtentions.push(imgSrc);

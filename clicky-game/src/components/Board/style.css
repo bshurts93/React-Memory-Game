@@ -1,3 +1,15 @@
 .board {
   background-color: rgb(202, 202, 202);
 }
+
+.board-row {
+  padding: 0 3rem;
+}
+
+.board-row:first-of-type {
+  padding-top: 3rem;
+}
+
+.board-row:last-of-type {
+  padding-bottom: 3rem;
+}

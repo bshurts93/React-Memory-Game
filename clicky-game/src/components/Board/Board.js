@@ -15,7 +15,9 @@ class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      imgSources: []
+      imgSources: [],
+      score: 0,
+      topScore: 0
     };
   }
 
@@ -34,7 +36,7 @@ class Board extends React.Component {
     );
   }
 
-  renderCard(i) {
+  renderCard = i => {
     return (
       <Card
         id={i}
@@ -42,18 +44,20 @@ class Board extends React.Component {
         onClick={() => this.handleClick}
       />
     );
-  }
+  };
 
   handleClick = () => {
     this.setState({
       imgSources: shuffle(teams.getImageExtentions())
     });
+
+    console.log(this.state);
   };
 
   render() {
     return (
       <div className="board container">
-        <Nav />
+        <Nav score={this.state.score} />
         <div className="board-row row">
           {this.renderCard(0)}
           {this.renderCard(1)}
