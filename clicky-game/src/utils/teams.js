@@ -32,14 +32,39 @@ const teams = {
     "wild",
     "wings"
   ],
-  imageExtentions: [],
-  getImageExtentions: function() {
-    this.imageExtentions = [];
-    for (var i = 0; i < this.names.length; i++) {
-      const imgSrc = "./logos/" + this.names[i] + ".png";
-      this.imageExtentions.push(imgSrc);
+  nameObjects: [
+    {
+      team: "avs",
+      id: 1
+    },
+    {
+      team: "blues",
+      id: 2
+    },
+    {
+      team: "bruins",
+      id: 3
+    },
+    {
+      team: "canadiens",
+      id: 4
     }
-    return this.imageExtentions;
+  ],
+  // imageExtentions: [],
+  // getImageExtentions: function() {
+  //   this.imageExtentions = [];
+  //   for (var i = 0; i < this.names.length; i++) {
+  //     const imgSrc = "./logos/" + this.names[i] + ".png";
+  //     this.imageExtentions.push(imgSrc);
+  //   }
+  //   return this.imageExtentions;
+  // }
+  getImageExtentions: function() {
+    for (var i = 0; i < this.nameObjects.length; i++) {
+      const imgSrc = "./logos/" + this.nameObjects[i].team + ".png";
+      this.nameObjects[i].src = imgSrc;
+    }
+    return this.nameObjects;
   }
 };
 

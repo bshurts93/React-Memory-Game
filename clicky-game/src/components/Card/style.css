@@ -14,8 +14,8 @@
 
 .card-image {
   position: relative;
-  width: 60%;
-  margin-top: 9%; /* Half the height */
-  margin-left: 9%; /* Half the width */
+  width: 50%;
+  margin-top: 20%; /* Half the height */
+  margin-left: 20%; /* Half the width */
   z-index: 10;
 }

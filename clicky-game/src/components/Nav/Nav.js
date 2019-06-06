@@ -10,13 +10,10 @@ function Nav(props) {
         </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <a href="sass.html">Sass</a>
+            <a href="/">Score: {props.score}</a>
           </li>
           <li>
-            <a href="badges.html">Components</a>
-          </li>
-          <li>
-            <a href="collapsible.html">JavaScript</a>
+            <a href="badges.html">Top score: {props.topScore}</a>
           </li>
         </ul>
       </div>
