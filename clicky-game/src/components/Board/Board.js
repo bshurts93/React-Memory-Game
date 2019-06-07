@@ -14,47 +14,54 @@ import shuffle from "../../utils/shuffle";
 class Board extends React.Component {
   constructor(props) {
     super(props);
+
+    // Set as current array from teams.js
+    this.localExtentions = shuffle(teams.getImageExtentions());
+
     this.state = {
-      imgSources: [],
+      imgSources: this.localExtentions,
       score: 0,
       topScore: 0,
       pickedTeams: []
     };
   }
 
-  // Set as current array from teams.js
-  localExtentions = shuffle(teams.getImageExtentions());
-
-  componentDidMount() {
-    this.setState(
-      {
-        imgSources: this.localExtentions
-      },
-      function() {
-        // Check to see if state holds all teams
-        console.log(this.state);
-      }
-    );
-  }
-
   renderCard = i => {
     return (
       <Card
-        id={i}
-        src={this.state.imgSources[i]}
-        onClick={() => this.handleClick}
+        teamObj={this.state.imgSources[i]}
+        onMouseDown={this.checkForLoss}
       />
     );
+  };
+
+  checkForLoss = e => {
+    const newID = e.target.id;
+
+    // If e.target.id has already been clicked, you lose
+    if (this.state.pickedTeams.includes(e.target.id)) {
+      alert("NAHHHHHHH DUDE");
+      this.setState({
+        score: 0,
+        pickedTeams: []
+      });
+    } else {
+      this.setState({
+        score: this.state.score + 1,
+        pickedTeams: [...this.state.pickedTeams, newID]
+      });
+    }
+    // Else add one to score, push id to array and shuffle
+  };
+
+  checkForWin = e => {
+    // If length of ids is equal to score, use wins
   };
 
   handleClick = el => {
     this.setState({
       imgSources: shuffle(teams.getImageExtentions())
     });
-
-    // if (this.state.pickedTeams.includes())
-    console.log(this.state);
-    console.log(el.target);
   };
 
   render() {
@@ -78,6 +85,12 @@ class Board extends React.Component {
           {this.renderCard(9)}
           {this.renderCard(10)}
           {this.renderCard(11)}
+        </div>
+        <div className="board-row row">
+          {this.renderCard(12)}
+          {this.renderCard(13)}
+          {this.renderCard(14)}
+          {this.renderCard(15)}
         </div>
       </div>
     );
