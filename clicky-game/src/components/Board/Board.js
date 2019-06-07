@@ -40,7 +40,14 @@ class Board extends React.Component {
 
     // If e.target.id has already been clicked, you lose
     if (this.state.pickedTeams.includes(e.target.id)) {
-      alert("NAHHHHHHH DUDE");
+      alert("You lose!");
+      // If score is higher than top score, update it
+      if (this.state.score > this.state.topScore) {
+        this.setState({
+          topScore: this.state.score
+        });
+      }
+      // Reset game data
       this.setState({
         score: 0,
         pickedTeams: []
@@ -48,7 +55,8 @@ class Board extends React.Component {
     } else {
       this.setState({
         score: this.state.score + 1,
-        pickedTeams: [...this.state.pickedTeams, newID]
+        pickedTeams: [...this.state.pickedTeams, newID],
+        imgSources: shuffle(teams.getImageExtentions())
       });
     }
     // Else add one to score, push id to array and shuffle
@@ -56,12 +64,6 @@ class Board extends React.Component {
 
   checkForWin = e => {
     // If length of ids is equal to score, use wins
-  };
-
-  handleClick = el => {
-    this.setState({
-      imgSources: shuffle(teams.getImageExtentions())
-    });
   };
 
   render() {
