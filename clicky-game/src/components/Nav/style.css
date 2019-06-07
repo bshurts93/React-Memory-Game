@@ -7,6 +7,11 @@
   height: 100%;
 }
 
+.text {
+  margin-left: 9rem;
+  color: rgb(226, 226, 226) !important;
+}
+
 .nhl-logo {
   height: 100%;
   margin-left: 3rem;

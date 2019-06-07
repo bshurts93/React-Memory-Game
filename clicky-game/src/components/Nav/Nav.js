@@ -8,6 +8,9 @@ function Nav(props) {
         <a href="/" className="brand-logo">
           <img className="nhl-logo" src="./nhl.png" alt="NHL logo" />
         </a>
+        <a href="/" className="brand-logo text">
+          Team Logo Memory Game
+        </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
             <a href="/">Score: {props.score}</a>
