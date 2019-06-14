@@ -10,7 +10,7 @@ To run this project on your own IDE or editor, simply use the package.json to `n
 
 Visit https://boiling-ravine-53707.herokuapp.com/ to play the live deployed version of the app via Heroku.
 
-[](nhl-game.gif)
+![](nhl-game.gif)
 
 ## Built With
 
