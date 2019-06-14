@@ -10,6 +10,8 @@ To run this project on your own IDE or editor, simply use the package.json to `n
 
 Visit https://boiling-ravine-53707.herokuapp.com/ to play the live deployed version of the app via Heroku.
 
+[](nhl-game.gif)
+
 ## Built With
 
 * [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
