@@ -2,20 +2,10 @@
   height: 12rem;
 }
 
-.circle {
-  position: relative;
-  width: 90%;
-  height: 90%;
-  border-radius: 10%;
-  background-color: rgb(221, 221, 221);
-  height: 100%;
-  width: 100%;
-}
-
 .card-image {
   position: relative;
-  width: 50%;
-  margin-top: 20%; /* Half the height */
+  max-width: 120px;
+  margin-top: 10%; /* Half the height */
   margin-left: 20%; /* Half the width */
   z-index: 10;
 }
